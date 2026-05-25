@@ -24,6 +24,10 @@ app.use(
 );
 app.use(express.json());
 
+app.get('/', (_req, res) => {
+  res.json({ status: 'ok', message: 'PainPointFinder API is running' });
+});
+
 app.use('/api/auth', authRoutes);
 app.use('/api/find', findRoutes);
 app.use('/api/finalize', finalizeRoutes);
@@ -41,7 +45,6 @@ app.use((err, _req, res, _next) => {
 const startServer = async () => {
   await connectDB();
   initScrapeQueue();
-
   app.listen(PORT, () => {
     console.log(`PainPointFinder server running on port ${PORT}`);
   });
