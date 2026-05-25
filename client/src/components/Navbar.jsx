@@ -21,10 +21,12 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-8">
-            <NavLink to="/" className="flex items-center gap-2 group">
-              <span className="text-2xl" role="img" aria-label="radar">
-                📡
-              </span>
+            <NavLink to="/" className="flex items-center gap-2.5 group">
+              <img
+                src="/logo.png"
+                alt="PainPointFinder"
+                className="w-9 h-9 rounded-lg object-cover ring-1 ring-violet-500/30"
+              />
               <span className="font-bold text-lg text-white group-hover:text-violet-300 transition-colors">
                 PainPointFinder
               </span>
