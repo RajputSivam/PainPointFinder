@@ -1,4 +1,9 @@
-"scripts": {
+{
+  "name": "painpointfinder",
+  "version": "1.0.0",
+  "description": "Discover real problems. Validate before you build.",
+  "type": "module",
+  "scripts": {
     "start": "node server/index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "nodemon server/index.js",
@@ -6,3 +11,22 @@
     "install:all": "npm install && npm install --prefix client",
     "test:scrapers": "node server/scripts/testScrapers.js"
   },
+  "dependencies": {
+    "apify-client": "^2.11.0",
+    "axios": "^1.7.9",
+    "bcryptjs": "^2.4.3",
+    "bullmq": "^5.34.3",
+    "concurrently": "^9.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "fast-xml-parser": "^5.8.0",
+    "ioredis": "^5.4.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb-memory-server": "^11.1.0",
+    "mongoose": "^8.9.2",
+    "nodemon": "^3.1.9",
+    "openai": "^4.77.0",
+    "snoowrap": "^1.23.0"
+  }
+}
